@@ -5,9 +5,10 @@
 
 class CaesarCipher {
   public:
-    CaesarCipher(const size_t key);
+    explicit CaesarCipher(const size_t key);
+    explicit CaesarCipher(const std::string key);
     
-    size_t key_; // the cipher key
+    size_t key_{0}; // the cipher key
 };
 
 #endif // MPAGSCIPHER_CAESARCIPHER_HPP
