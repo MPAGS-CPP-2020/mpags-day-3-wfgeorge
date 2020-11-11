@@ -103,8 +103,9 @@ follows:
     ├── MPAGSCipher                 Subdirectory for MPAGSCipher library code
     │   ├── ProcessCommandLine.cpp
     │   ├── ProcessCommandLine.hpp
-    │   ├── RunCaesarCipher.cpp
-    │   ├── RunCaesarCipher.hpp
+    │   ├── CaesarCipher.cpp
+    │   ├── CaesarCipher.hpp
+        ├── CipherMode.hpp
     │   ├── TransformChar.cpp
     │   └── TransformChar.hpp
     ├── README.md                   This file, describes the project
