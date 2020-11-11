@@ -27,6 +27,25 @@ CaesarCipher::CaesarCipher(const std::string key)
 }
 
 
+void CaesarCipher::setKey(const size_t key){
+    key_ = key;
+}
+
+void CaesarCipher::setKey(const std::string key){
+    if ( !key.empty() ) {
+    // As in constructor above need to check string contains a valid positive 
+    // before attempting to convert to size_t
+            for ( const auto& elem : key ) {
+            if ( ! std::isdigit(elem) ) {
+                std::cerr << "[error] cipher key must be an unsigned long integer for Caesar cipher,\n"
+	                      << "        the supplied key (" << key << ") could not be successfully converted" << std::endl;
+	            exit(1);
+            }
+        }
+        key_ = std::stoul(key);
+    }
+}
+
 std::string CaesarCipher::applyCipher( const std::string& inputText, const CipherMode encrypt )
 {
   // Create the output string

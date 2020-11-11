@@ -11,6 +11,9 @@ class CaesarCipher {
     explicit CaesarCipher(const size_t key);
     explicit CaesarCipher(const std::string key);
 
+    void setKey(const size_t key);
+    void setKey(const std::string key);
+
     std::string applyCipher(const std::string& inputText, const CipherMode encrypt);
 
   private:
