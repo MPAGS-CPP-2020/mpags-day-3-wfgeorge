@@ -20,6 +20,10 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wfatal-errors -Wshadow -pedantic")
 # - Add the MPAGSCipher subdirectory to the build
 add_subdirectory(MPAGSCipher)
 
+# - Enable testing and add Testing subdir to build
+enable_testing()
+add_subdirectory(Testing)
+
 # - Declare the build of mpags-cipher main program
 add_executable(mpags-cipher mpags-cipher.cpp)
 # - Link executable to the MPAGSCipher library
