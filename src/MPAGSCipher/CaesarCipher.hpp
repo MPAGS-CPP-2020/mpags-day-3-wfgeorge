@@ -4,12 +4,14 @@
 #include <string>
 #include <vector>
 
+#include "CipherMode.hpp"
+
 class CaesarCipher {
   public:
     explicit CaesarCipher(const size_t key);
     explicit CaesarCipher(const std::string key);
 
-    std::string applyCipher(const std::string& inputText, const bool encrypt);
+    std::string applyCipher(const std::string& inputText, const CipherMode encrypt);
 
   private:
     size_t key_{0}; // the cipher key
