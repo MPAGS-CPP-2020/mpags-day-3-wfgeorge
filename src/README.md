@@ -111,6 +111,10 @@ follows:
     ├── README.md                   This file, describes the project
     ├── Testing                     Subdirectory for testing the MPAGSCipher library
     │   └── catch.hpp
+    │   └── testCaesarCipher.cpp
+    │   └── testCatch.cpp
+    │   └── testHello.cpp
+    │   └── testTransformChar.cpp
     └── mpags-cipher.cpp            Main program C++ source file
 ```
 
